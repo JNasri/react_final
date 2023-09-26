@@ -15,13 +15,14 @@ export default function Education() {
     };
   }, []);
   return (
-    <div className="container py-2">
+    <div id="education" className="container py-2">
       <div className="row text-white text-center">
-        <h1 className="display-2 mt-3" style={{ fontWeight: 500 }}>
+        <h1 className="display-2 mt-5" style={{ fontWeight: 500 }}>
           Education
         </h1>
+        <hr className="bg-danger border-2 border-top border-white" />
       </div>
-      <div className="row g-0 mt-5">
+      <div className="row g-0 mt-2">
         <div className="col h-100">
           <Facility
             name={"High School Degree"}
@@ -78,8 +79,8 @@ export default function Education() {
           />
         </div>
         <div className="col-1 d-none d-lg-flex">
-          <div class="mx-auto bg-light" style={{ width: 3 }}>
-            <div class="vr"></div>
+          <div className="mx-auto bg-light" style={{ width: 3 }}>
+            <div className="vr"></div>
           </div>
         </div>
         <div className="col d-none d-lg-block">

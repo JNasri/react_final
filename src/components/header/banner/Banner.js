@@ -11,12 +11,17 @@ export default function Banner() {
               Hi There!
             </h1>
             <h1 className="text-white display-4" style={{ fontWeight: 500 }}>
-              I'm Youssef Nasri
+              <span
+                className="bg-light text-dark display-4"
+                style={{ fontWeight: 500 }}
+              >
+                              I'm Youssef Nasri
+              </span>
             </h1>
             <h1 className="text-white display-6">
               Full Stack Software Developer
             </h1>
-            <hr class="bg-danger border-2 border-top border-white" />
+            <hr className="bg-danger border-2 border-top border-white" />
             <p className="text-white h4">
               As a fresh Computer Science graduate, I'm fueled by curiosity and
               a drive for excellence, actively seeking opporunities to gain
