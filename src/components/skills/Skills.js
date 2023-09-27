@@ -1,12 +1,14 @@
 import React from "react";
 import Skill from "./Skill";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function Skills() {
+  const lang = useLanguage();
   return (
     <div id="skills" className="container py-2">
       <div className="row text-white text-center">
         <h1 className="display-2 mt-5" style={{ fontWeight: 500 }}>
-          Skills
+          {lang.lang === "ar" ? "مهاراتي" : "Skills"}
         </h1>
         <hr className="bg-danger border-2 border-top border-white" />
       </div>

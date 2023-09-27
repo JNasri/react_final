@@ -11,10 +11,15 @@ import Experience from "./components/experience/Experience";
 import Skills from "./components/skills/Skills";
 import Projects from "./components/projects/Projects";
 import ContactForm from "./components/footer/ContactForm";
+import { useLanguage } from "./context/LanguageContext";
 
 function App() {
+  const { lang } = useLanguage();
   return (
-    <div className="App bg-dark" style={{ direction: "ltr" }}>
+    <div
+      className="App bg-dark"
+      style={{ direction: lang == "ar" ? "rtl" : "ltr" }}
+    >
       <SwitchLang />
       <Banner />
       <NavigateBar />
@@ -22,7 +27,7 @@ function App() {
       <Experience />
       <Skills />
       <Projects />
-      <ContactForm/>
+      <ContactForm />
     </div>
   );
 }

@@ -1,6 +1,8 @@
 import React from "react";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function Facility(props) {
+  const lang = useLanguage();
   return (
     <div className="row text-white mx-auto">
       <div
@@ -44,7 +46,9 @@ export default function Facility(props) {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    View Certificate
+                    {lang.lang === "ar"
+                      ? "اطّلع على الشهادة"
+                      : "View Certificate"}
                   </a>
                 </small>
               </p>

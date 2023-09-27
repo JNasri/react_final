@@ -1,7 +1,9 @@
 import React from "react";
 import "./banner.css";
+import { useLanguage } from "../../../context/LanguageContext";
 
 export default function Banner() {
+  const lang = useLanguage();
   return (
     <>
       <div className="container d-flex py-3 bg-dark">
@@ -9,26 +11,29 @@ export default function Banner() {
           <hr className="bg-danger border-2 border-top border-white" />
           <div className="col-md-6">
             <h1 className="text-white display-3" style={{ fontWeight: 700 }}>
-              Hi There!
+              {lang.lang === "ar" ? "أهلًا وسهلًا" : "Hi There!"}
             </h1>
-            <h1 className="text-white display-4" style={{ fontWeight: 500 }}>
+            <h1
+              className="text-white display-4 mt-3"
+              style={{ fontWeight: 500 }}
+            >
               <span
                 className="bg-light text-dark display-4"
                 style={{ fontWeight: 500 }}
               >
-                I'm Youssef Nasri
+                {lang.lang === "ar" ? "أنا يوسف نصري" : "I'm Youssef Nasri"}
               </span>
             </h1>
             <h1 className="text-white display-6">
-              Full Stack Software Developer
+              {lang.lang === "ar"
+                ? "مبرمج و مطور مواقع وتطبيقات"
+                : "Full Stack Software Developer"}
             </h1>
             <hr className="bg-danger border-2 border-top border-white" />
             <p className="text-white h4">
-              As a fresh Computer Science graduate, I'm fueled by curiosity and
-              a drive for excellence, actively seeking opporunities to gain
-              practical experience, and Eager to push myself into challenging
-              projects. I'm excited to contribute my skills and excel in the
-              tech industry.
+              {lang.lang === "ar"
+                ? "كطالب جديد حاصل على شهادة في علوم الحاسوب، أنا مليء بالفضول والرغبة في التميز، وأبحث بنشاط عن الفرص لاكتساب الخبرة العملية، وأتطلع بشغف إلى خوض التحديات والمشاركة في بناء المشاريع. أنا متحمس جدًا للمساهمة بمهاراتي والتألق في مجال العمل."
+                : "As a fresh Computer Science graduate, I'm fueled by curiosity and a drive for excellence, actively seeking opporunities to gain practical experience, and Eager to push myself into challenging projects. I'm excited to contribute my skills and excel in the tech industry."}
             </p>
           </div>
           <div className="col-md-5 my-auto mx-auto">
@@ -42,7 +47,9 @@ export default function Banner() {
           </div>
           <div className="my-2 text-white text-center">
             <hr className="bg-danger border-2 border-top border-white" />
-            <div className="h4">Check my Socials</div>
+            <div className="h4">
+              {lang.lang === "ar" ? "ألق نظرة على حساباتي" : "Check my Socials"}
+            </div>
             <a href="http://google.com" target="_blank" rel="noreferrer">
               <img
                 src={
