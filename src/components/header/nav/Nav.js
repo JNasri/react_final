@@ -6,7 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 export default function NavigateBar() {
   return (
     <>
-      <Navbar bg="white" sticky="top" className="rounded-pill mx-md-4 border border-dark" style={{borderWidth:"80"}}>
+      <Navbar bg="white" sticky="top" className="border-bottom border-dark">
         <Container>
           <Nav className="mx-auto">
             <Nav.Link href="#education">
